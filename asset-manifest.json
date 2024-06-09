@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.bb0465a3.css",
+    "main.js": "/static/js/main.25f4c0c8.js",
+    "static/media/avatar-2.svg": "/static/media/avatar-2.a9ab35a8913dad6ad39aba26ae022bf4.svg",
+    "static/media/avatar.svg": "/static/media/avatar.07e3ca2d298b0b1e9b5c47070e151bc4.svg",
+    "static/media/SF_2 1.svg": "/static/media/SF_2 1.553974b5fb7a78547486a1bbbdefda7d.svg",
+    "static/media/Group-text.svg": "/static/media/Group-text.e381480e43b6ab02e2c1c3babc86ebce.svg",
+    "static/media/Logomark_1_.svg": "/static/media/Logomark_1_.28d5d4db57a81648d0271d6e11375636.svg",
+    "static/media/gift illustration.svg": "/static/media/gift illustration.dbaf4574bd27f597e8a56354e88191d2.svg",
+    "static/media/setting.svg": "/static/media/setting.f6cecc5fef4b0fdde5a816580271c165.svg",
+    "static/media/calendar.svg": "/static/media/calendar.4cda4eadd78172e602c36f44fc8f7b90.svg",
+    "static/media/library.svg": "/static/media/library.f504257a38acc1fa095232a7e2236fbb.svg",
+    "static/media/trainer.svg": "/static/media/trainer.43b69ffb787599c37aae9e289d9844cd.svg",
+    "static/media/Messages, Chat.svg": "/static/media/Messages, Chat.c7de671c2f21758013438ae117d4f18e.svg",
+    "static/media/icon-main.svg": "/static/media/icon-main.84852fbc798e93e07431eb6584ad7c4a.svg",
+    "static/media/win.svg": "/static/media/win.1067012d6132509b63090fb4809da390.svg",
+    "static/media/User,Profile.svg": "/static/media/User,Profile.75f680e060a4ecf35ba39566fca44dc2.svg",
+    "static/media/Pay.svg": "/static/media/Pay.272339215f2cb27bbb929fb74fad9226.svg",
+    "static/media/questions.svg": "/static/media/questions.3947abf97500f221b72120100514a79e.svg",
+    "static/media/help.svg": "/static/media/help.e61dd4373a51fd89e4ae55c3bf43d413.svg",
+    "index.html": "/index.html",
+    "static/media/exit.svg": "/static/media/exit.65712a758914cd0e3684baa563077a8b.svg",
+    "static/media/calendar-pay.svg": "/static/media/calendar-pay.a47cc65a49a6bf4e6a94cd7a32b2f62b.svg",
+    "static/media/Path.svg": "/static/media/Path.c38861cf1d28c6a9201d4cd58adb846d.svg",
+    "main.bb0465a3.css.map": "/static/css/main.bb0465a3.css.map",
+    "main.25f4c0c8.js.map": "/static/js/main.25f4c0c8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bb0465a3.css",
+    "static/js/main.25f4c0c8.js"
+  ]
+}
