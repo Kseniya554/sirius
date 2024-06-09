@@ -1,0 +1,263 @@
+.calendar {
+  width: 80.1389%;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.calendar__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calendar-selector {
+  width: 253px;
+  height: 36px;
+  margin-top: 22px;
+  margin-left: 32px;
+  box-sizing: border-box;
+}
+
+.calendar-selector label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #333;
+}
+
+.calendar-selector select {
+  width: 253px;
+  height: 36px;
+  border: 1px solid #ececec;
+  border-radius: 8px;
+  background-color: #fff;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #79747f;
+  padding-right: 10px;
+  padding-left: 12px;
+}
+
+.calendar-selector p {
+  margin-top: 10px;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #79747f;
+}
+
+.calendar-button {
+  width: 344px;
+  height: 40px;
+  margin-top: 20px;
+  margin-right: 50px;
+  border-radius: 30px;
+  cursor: pointer;
+  border: none;
+  color: #323854;
+  background-color: #decfff;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+
+.calendar-title {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 27px;
+}
+
+.calendar-title__button-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Circe Rounded';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20px;
+  width: 156px;
+  height: 32px;
+}
+
+.calendar-title__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  height: 24px;
+  width: 24px;
+}
+
+.calendar-title-day {
+  width: 85px;
+  height: 32px;
+  border-radius: 15px;
+  margin-left: 32px;
+  margin-right: 16px;
+  cursor: pointer;
+  border: 1px solid #8d7fc7;
+  background-color: inherit;
+  color: #323854;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: center;
+}
+
+.calendar-title-question {
+  height: 18px;
+  width: 18px;
+  border: 1.5px solid #7362bc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: inherit;
+  color: #323854;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: center;
+  margin: auto 0;
+  cursor: pointer;
+}
+
+.calendar-table {
+  border-collapse: collapse;
+  margin-top: 12px;
+  margin-left: 32px;
+  margin-right: 50px;
+  max-width: 1072px;
+  height: 529px;
+}
+
+.calendar-day {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  text-align: right;
+  color: #323854;
+}
+
+.calendar-day_color {
+  color: #c8c5cd;
+}
+
+.calendar-tr {
+  border: none;
+  text-align: right;
+  background-color: inherit;
+}
+
+.calendar-th {
+  text-align: right;
+  font-family: 'Circe Rounded';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20.25px;
+  color: #79747f;
+  padding: 0;
+}
+
+.calendar-td {
+}
+
+.calendar-table td {
+  border: 1px solid #ddd;
+  text-align: center;
+  position: relative;
+  height: 101px;
+  width: 153.14px;
+  box-sizing: border-box;
+  padding-top: 25px;
+  padding-left: 4px;
+}
+
+.calendar-table td:hover {
+  background-color: #f0f0f0;
+}
+
+.calendar-table__prev-month {
+  color: #ccc;
+}
+
+.calendar-table__next-month {
+  color: #ccc;
+}
+
+.calendar-schedule {
+  height: 34px;
+  width: 145.14px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2px;
+  border: 0.5px solid #bbe7b9;
+  border-radius: 2px;
+  justify-content: space-around;
+  box-sizing: border-box;
+  position: relative;
+  background-color: #d7f0d6;
+}
+
+.calendar-schedule_none {
+  border: none;
+  background-color: inherit;
+}
+
+.calendar-schedule__prev-month {
+  background-color: inherit;
+}
+
+.calendar-schedule__prev-month:last-child {
+  border-color: #7362BC;
+}
+
+.calendar-time {
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #323854;
+  text-align: left;
+}
+
+.calendar-subject {
+  font-family: 'Circe Rounded';
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 8px;
+  text-align: left;
+  color: #323854;
+}
+
+.calendar-pay {
+  position: absolute;
+  top: 1.6px;
+  right: 1.6px;
+}
+
+.calendar-schedule_today {
+  background-color: #EEEEFF;
+  border-color: #DECFFF;
+}
+
+.calendar-schedule_today:last-child{
+  background-color: #F5F5F5;
+  border-color: #C8C5CD;
+}
+
+.calendar-schedule_special-pay {
+  border: 2px solid red;
+}

@@ -1,0 +1,234 @@
+.login {
+  background-color: #fdfdff;
+  box-sizing: border-box;
+  max-width: 1440px;
+  min-height: 100vh;
+}
+
+.login__header {
+  padding-top: 152px;
+  margin: 0 auto;
+  width: 340px;
+}
+
+.login__logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.login__title {
+  color: #323854;
+  font-family: 'Circe Rounded';
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 35px;
+  padding-bottom: 16px;
+  padding-top: 32px;
+  margin: 0 auto;
+  text-align: center;
+  height: 35px;
+}
+
+.login__form {
+  margin: 0 auto;
+  width: 340px;
+}
+
+.login__label {
+  color: #8b8b8b;
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login__input {
+  box-sizing: border-box;
+  border-radius: 8px;
+  opacity: 0px;
+  background-color: inherit;
+  border: solid 1px #ececec;
+  color: #79747f;
+  padding-left: 12px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  width: 339px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: left;
+  font-family: 'Circe Rounded';
+}
+
+.login__password-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.login__password-icon {
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.login__checbox {
+  margin-top: 4px;
+  display: flex;
+}
+
+.login__checbox-input {
+  height: 16px;
+  width: 16px;
+  appearance: none;
+  background-color: #fff;
+  border: 1px solid #79747f;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.login__checbox-input:checked {
+  background-color: #8d7fc7;
+  border-color: #8d7fc7;
+}
+
+.login__checbox-input:checked::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 9px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.login__checbox-text {
+  margin: 0;
+  padding-left: 4px;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #79747f;
+  align-self: center;
+  display: flex;
+}
+
+.login__button {
+  width: 339px;
+  height: 48px;
+  background-color: #8d7fc7;
+  color: #ffffff;
+  font-family: 'Circe Rounded';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.5px;
+  text-align: center;
+  font-style: normal;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.login__button_disabled {
+  opacity: 0.7;
+  cursor: auto;
+}
+
+.login__register {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login__register-link {
+  margin: 0;
+  text-decoration: none;
+  color: #008aff;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: center;
+}
+
+.login__input-error {
+  height: 12px;
+  width: 396px;
+}
+
+.login__input-error_active {
+  font-family: 'Circe Rounded';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 5px;
+  color: #ee3465;
+}
+
+.login__footer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 339px;
+}
+
+.login__register-text {
+  color: #323854;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: center;
+  margin-top: 73px;
+  margin-bottom: 6px;
+}
+
+.login__translate {
+  display: flex;
+  margin: 109px auto 32px;
+  gap: 8px;
+  justify-content: center;
+}
+
+.login__translate-button {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #79747f;
+  display: flex;
+  justify-content: center;
+}
+
+.login__translate-button_active {
+  color: #7362bc;
+  font-size: 24px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotation {
+  animation: rotation 20s linear infinite;
+}

@@ -1,0 +1,377 @@
+.info-block {
+  display: flex;
+  flex-wrap: wrap;
+  width: 74.45%;
+  margin-left: auto;
+  margin-right: 50px;
+  margin-top: 20px;
+  gap: 20px;
+  align-items: end;
+}
+
+.action {
+  width: 526px;
+  height: 248px;
+  border-radius: 30px;
+  background-color: #7362bc;
+  position: relative;
+  overflow: hidden;
+}
+
+.action__title {
+  margin-left: 40px;
+  width: 366px;
+  z-index: 20;
+  font-family: 'Circe Rounded';
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  color: #ffffff;
+  margin-top: 56px;
+  margin-bottom: 12px;
+}
+
+.action__subtitle {
+  margin-left: 40px;
+  width: 294px;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.action__img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.time {
+  width: 344px;
+  height: 248px;
+  border-radius: 20px;
+  background-color: #fff1cb;
+  color: #323854;
+}
+
+.time__title {
+  width: 180px;
+  margin: 32px auto;
+  text-align: center;
+  font-family: 'Circe Rounded';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.time__info {
+  width: 172px;
+  height: 32px;
+  margin: 0 auto 32px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.time__block {
+  display: flex;
+}
+
+.time__number {
+  margin: 0;
+  font-family: 'Circe Rounded';
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 35px;
+}
+
+.time__text {
+  margin: 0;
+  font-family: 'Circe Rounded';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 20.25px;
+  display: flex;
+  align-items: end;
+}
+
+.time__button {
+  width: 220px;
+  height: 48px;
+  border-radius: 30px;
+  margin: 0 auto;
+  background-color: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #323854;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: center;
+  border: 1px dashed #323854;
+  cursor: pointer;
+}
+
+.dop {
+  width: 162px;
+  height: 114px;
+  border-radius: 20px;
+  background-color: #e8cbff;
+}
+
+.balance {
+  width: 343.2px;
+  height: 372px;
+  border-radius: 30px;
+  border: 1px solid #7362bc;
+  color: #323854;
+  box-sizing: border-box;
+  padding: 28px 0 30px;
+  position: relative;
+}
+
+.balance__title {
+  font-family: 'Circe Rounded';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 16px;
+  padding-left: 28px;
+}
+
+.balance__info-block {
+  max-height: 179px;
+  overflow-y: auto;
+  padding-right: 0;
+}
+
+.balance_block {
+  width: 288px;
+  padding-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eeeeff;
+  align-items: center;
+  margin-left: 28px;
+  padding-top: 10px;
+}
+
+.balance_block:last-child,
+.balance_block--last {
+  border-bottom: none;
+}
+
+.balance__text {
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+
+.balance__number {
+  margin: 0;
+  width: 40px;
+  height: 40px;
+  font-family: 'Circe Rounded';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 25.54px;
+  border-radius: 50%;
+  background-color: #eeeeff;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.balance__button {
+  width: 288px;
+  height: 40px;
+  border-radius: 30px;
+  background-color: #decfff;
+  border: none;
+  margin-top: 36px;
+  margin-left: 28px;
+  cursor: pointer;
+}
+
+.balance__info-block::-webkit-scrollbar {
+  width: 4px;
+  height: 108px;
+}
+
+.balance__info-block::-webkit-scrollbar-thumb {
+  background-color: #eeeeff;
+  border-radius: 10px;
+}
+
+.balance__info-block::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+
+.schedule {
+  width: 707px;
+  height: 372px;
+  border-radius: 30px;
+  border: 1px solid #7362bc;
+  box-sizing: border-box;
+  padding: 28px 28px 30px;
+}
+
+.schedule__title {
+  font-family: 'Circe Rounded';
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+  padding-bottom: 16px;
+}
+
+.schedule__rows {
+  display: flex;
+  width: 652px;
+  height: 60px;
+  box-sizing: border-box;
+  padding-bottom: 9px;
+  border-bottom: 1px solid #eeeeff;
+  color: #323854;
+}
+
+.schedule__rows-border{
+  border-bottom: none;
+}
+
+.schedule__rows-date {
+  width: 42px;
+  height: 48px;
+  margin-right: 16px;
+}
+
+.schedule__rows-number {
+  font-family: 'Circe Rounded';
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  margin: 0;
+}
+
+.schedule__rows-month {
+  margin: 0;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  text-align: center;
+  
+}
+
+.schedule__rows-lesson {
+  width: 180px;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  display: flex;
+  align-items: center;
+}
+
+.schedule__rows-time {
+  margin-left: 24px;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
+  width: 70px;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  display: flex;
+  align-items: center;  
+}
+
+.schedule__rows-teacher {
+  display: flex;
+  align-items: center; 
+}
+
+.schedule__rows-teacher-icon {
+  height: 16px;
+  width: 16px;
+}
+
+.schedule__rows-teacher-name {
+  font-family:' Circe Rounded';
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 12px;
+  margin: 0;  
+}
+
+.schedule__rows-buttons {
+  width: 116px;
+  margin-right: 40px;
+  margin-left: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.schedule__rows-left-button {
+  width: 56px;
+  height: 32px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  color: #323854;
+  border: 1px solid #8D7FC7;
+  background-color: inherit;
+}
+
+.button-border{
+  border-color: #EEEEFF;
+}
+
+.schedule__rows-right-button {
+  width: 56px;
+  height: 32px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: 'Circe Rounded';
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16.2px;
+  background-color: #8D7FC7;
+  border: none;
+  color: #ffffff;
+}
+
+.schedule__button{
+  width: 344px;
+  height: 40px;
+  margin: 36px auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: #DECFFF;
+  border-radius: 30px;
+  border: none;
+  font-family: 'Circe Rounded';
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: center;
+  color: #323854;
+}
