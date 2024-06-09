@@ -14,7 +14,9 @@ const Calendar: React.FC = () => {
 
   // Устанавливаем текущую дату как 1 марта 2024 года
   const today = new Date(2024, 2, 1);
-  const todayString = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+  const todayString = `${today.getFullYear()}-${String(
+    today.getMonth() + 1
+  ).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
 
   const schedule: Schedule = {
     '2024-02-27': [
@@ -41,28 +43,16 @@ const Calendar: React.FC = () => {
       { time: '13.00-13.45', subject: 'Ментальная арифметика' },
       { time: '13.00-13.45', subject: 'Ментальная арифметика' },
     ],
-    '2024-03-04': [
-      { time: '13.00-13.45', subject: 'Ментальная арифметика' },
-    ],
-    '2024-03-06': [
-      { time: '13.00-13.45', subject: 'Ментальная арифметика' },
-    ],
-    '2024-03-08': [
-      { time: '13.00-13.45', subject: 'Ментальная арифметика' },
-    ],
-    '2024-03-14': [
-      { time: '13.00-13.45', subject: 'Ментальная арифметика' },
-    ],
-    '2024-03-16': [
-      { time: '13.00-13.45', subject: 'Ментальная арифметика' },
-    ],
+    '2024-03-04': [{ time: '13.00-13.45', subject: 'Ментальная арифметика' }],
+    '2024-03-06': [{ time: '13.00-13.45', subject: 'Ментальная арифметика' }],
+    '2024-03-08': [{ time: '13.00-13.45', subject: 'Ментальная арифметика' }],
+    '2024-03-14': [{ time: '13.00-13.45', subject: 'Ментальная арифметика' }],
+    '2024-03-16': [{ time: '13.00-13.45', subject: 'Ментальная арифметика' }],
     '2024-03-18': [
       { time: '13.00-13.45', subject: 'Ментальная арифметика' },
       { time: '13.00-13.45', subject: 'Ментальная арифметика' },
     ],
-    '2024-03-23': [
-      { time: '13.00-13.45', subject: 'Ментальная арифметика' },
-    ],
+    '2024-03-23': [{ time: '13.00-13.45', subject: 'Ментальная арифметика' }],
     '2024-03-31': [
       { time: '13.00-13.45', subject: 'Ментальная арифметика' },
       { time: '13.00-13.45', subject: 'Ментальная арифметика' },
@@ -132,14 +122,54 @@ const Calendar: React.FC = () => {
           ).padStart(2, '0')}-${String(dayOfMonth).padStart(2, '0')}`;
           const daySchedule = schedule[currentDayString] || [];
           const hasClasses = daySchedule.some((entry) => entry.time !== '');
+          const isSpecialDatePay = currentDayString === '2024-02-29';
+          const isSpecialDatelineThrough = currentDayString === '2024-02-28';
           cells.push(
             <td key={j} className='calendar-table__prev-month'>
-              <span className={`calendar-day ${hasClasses ? 'calendar-day_color' : ''}`}>{dayOfMonth}</span>
+              <span
+                className={`calendar-day ${
+                  hasClasses ? 'calendar-day_color' : ''
+                }${isSpecialDatePay ? 'calendar-schedule_special-pay' : ''} ${
+                  isSpecialDatelineThrough ? 'calendar-schedule_through' : ''
+                }`}
+              >
+                {dayOfMonth}
+              </span>
               {daySchedule.length > 0 ? (
                 daySchedule.map((entry, index) => (
-                  <div key={index} className='calendar-schedule calendar-schedule__prev-month'>
-                    <span className='calendar-time'>{entry.time}</span>
-                    <span className='calendar-subject'>{entry.subject}</span>
+                  <div
+                    key={index}
+                    className={`calendar-schedule calendar-schedule__prev-month ${
+                      daySchedule.length === 1 ? 'calendar-schedule_single' : ''
+                    } ${hasClasses ? 'calendar-day_color' : ''} ${
+                      isSpecialDatePay ? 'calendar-schedule_special-pay' : ''
+                    }`}
+                  >
+                    <span
+                      className={`calendar-time ${
+                        isSpecialDatelineThrough
+                          ? 'calendar-schedule_through'
+                          : ''
+                      }`}
+                    >
+                      {entry.time}
+                    </span>
+                    <span
+                      className={`calendar-subject  ${
+                        isSpecialDatelineThrough
+                          ? 'calendar-schedule_through'
+                          : ''
+                      }`}
+                    >
+                      {entry.subject}
+                    </span>
+                    {isSpecialDatePay && hasClasses && (
+                      <img
+                        className='calendar-pay'
+                        src={calendar_pay}
+                        alt='иконка'
+                      />
+                    )}
                   </div>
                 ))
               ) : (
@@ -150,7 +180,9 @@ const Calendar: React.FC = () => {
         } else if (dayCounter > daysInMonth) {
           cells.push(
             <td key={j} className='calendar-table__next-month'>
-              <span className='calendar-day calendar-day_color'>{dayCounter - daysInMonth}</span>
+              <span className='calendar-day calendar-day_color'>
+                {dayCounter - daysInMonth}
+              </span>
               <div className='calendar-schedule calendar-schedule_none'></div>
             </td>
           );
@@ -162,16 +194,38 @@ const Calendar: React.FC = () => {
           const daySchedule = schedule[currentDayString] || [];
           const hasClasses = daySchedule.some((entry) => entry.time !== '');
           const isToday = currentDayString === todayString; // Проверка на текущий день
-          const isSpecialDatePay = currentDayString === '2024-02-29';
+          const isSpecialDateNoPay = currentDayString === '2024-03-03';
+          const isSpecialDateLastChild =
+            currentDayString === '2024-03-03' ||
+            currentDayString === '2024-03-02';
           cells.push(
             <td key={j} className={isToday ? 'calendar-table__today' : ''}>
-              <span className={`calendar-day ${hasClasses ? 'calendar-day_color' : ''} ${isToday ? 'calendar-day_today' : ''}`}>{dayCounter}</span>
+              <span
+                className={`calendar-day ${
+                  hasClasses ? 'calendar-day_color' : ''
+                } ${isToday ? 'calendar-day_today' : ''}`}
+              >
+                {dayCounter}
+              </span>
               {daySchedule.length > 0 ? (
                 daySchedule.map((entry, index) => (
-                  <div key={index} className={`calendar-schedule ${isToday ? 'calendar-schedule_today' : ''} ${isSpecialDatePay ? 'calendar-schedule_special-pay' : ''}`}>
+                  <div
+                    key={index}
+                    className={`calendar-schedule ${
+                      daySchedule.length === 1 ? 'calendar-schedule_single' : ''
+                    } ${isToday ? 'calendar-schedule_today' : ''} ${
+                      isSpecialDateLastChild ? 'calendar-schedule__border' : ''
+                    }`}
+                  >
                     <span className='calendar-time'>{entry.time}</span>
                     <span className='calendar-subject'>{entry.subject}</span>
-                    {!isToday && hasClasses && <img className='calendar-pay' src={calendar_pay} alt='иконка' />}
+                    {hasClasses && !isToday && !isSpecialDateNoPay && (
+                      <img
+                        className='calendar-pay'
+                        src={calendar_pay}
+                        alt='иконка'
+                      />
+                    )}
                   </div>
                 ))
               ) : (
@@ -216,7 +270,9 @@ const Calendar: React.FC = () => {
           >
             &larr;
           </button>
-          <span>{`${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`}</span>
+          <span>{`${
+            months[currentDate.getMonth()]
+          } ${currentDate.getFullYear()}`}</span>
           <button className='calendar-title__button' onClick={handleNextMonth}>
             &rarr;
           </button>
@@ -229,7 +285,9 @@ const Calendar: React.FC = () => {
           <thead>
             <tr className='calendar-tr'>
               {daysOfWeek.map((day, index) => (
-                <th key={index} className='calendar-th'>{day}</th>
+                <th key={index} className='calendar-th'>
+                  {day}
+                </th>
               ))}
             </tr>
           </thead>

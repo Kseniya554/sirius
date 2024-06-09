@@ -211,6 +211,12 @@
   background-color: #d7f0d6;
 }
 
+.calendar-schedule_single {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+}
+
 .calendar-schedule_none {
   border: none;
   background-color: inherit;
@@ -259,5 +265,21 @@
 }
 
 .calendar-schedule_special-pay {
-  border: 2px solid red;
+  border: 0.5px solid #E12828;
+}
+
+.calendar-schedule_special-pay:last-child {
+  border-color: #E12828;
+}
+
+.calendar-schedule_through{
+  text-decoration: line-through;
+}
+
+.calendar-schedule__border:last-child{
+  border-color: #7362BC;
+}
+
+.calendar-table tbody td:nth-child(6), .calendar-table tbody td:nth-child(7) {
+  background-color: #FBFBFC;
 }
